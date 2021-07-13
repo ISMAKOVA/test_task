@@ -1,0 +1,241 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: rgba(24, 24, 24, 255);
+}
+
+html {
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    color: #d5d5d7;
+}
+
+.container {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    margin: 0;
+}
+
+.header {
+    height: 70px;
+    display: flex;
+    vertical-align: center;
+    justify-content: flex-end;
+    align-items: center;
+    /*background: #d7e1f4;*/
+}
+
+#logo {
+    margin-right: 26px;
+    color: #fdf9c2;
+    font-weight: bold;
+    font-size: 26px;
+}
+
+.toggle-button {
+    position: fixed;
+    border: none;
+    background-color: transparent;
+    border-radius: 50%;
+    outline: none;
+    cursor: pointer;
+    top: 10px;
+    left: 16px;
+    z-index: 30;
+    width: 50px;
+    height: 50px;
+    -webkit-transition: 0.4s;
+    -moz-transition: 0.4s;
+    -o-transition: 0.4s;
+    transition: 0.4s;
+}
+
+.toggle-button:hover .toggle-button__lines {
+    filter: brightness(0.7);
+}
+
+.toggle-button__lines::before,
+.toggle-button__lines::after,
+.toggle-button__lines {
+    position: absolute;
+    width: 28px;
+    height: 2px;
+    background-color: #cabdfb;
+    -webkit-transition: 0.4s;
+    -moz-transition: 0.4s;
+    -o-transition: 0.4s;
+    transition: 0.4s;
+}
+
+.toggle-button__lines {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.toggle-button__lines::before {
+    content: '';
+    top: -10px;
+    left: 0;
+}
+
+.toggle-button__lines::after {
+    content: '';
+    top: 10px;
+    left: 0;
+}
+
+.toggle-button__active .toggle-button__lines {
+    background-color: transparent;
+}
+
+.toggle-button__active .toggle-button__lines::before {
+    top: 0;
+    left: 0;
+    transform: rotate(45deg);
+}
+
+.toggle-button__active .toggle-button__lines::after {
+    top: 0;
+    left: 0;
+    transform: rotate(-45deg);
+}
+
+
+.side-bar__nav {
+    box-sizing: border-box;
+    display: none;
+    flex: 30%;
+    width: 90%;
+    height: 30%;
+    flex-flow: column;
+    border-radius: 30px;
+    background: rgba(202, 189, 251, 0.04);
+    -webkit-transition: 1.8s;
+    -moz-transition: 0.8s;
+    -o-transition: 0.8s;
+    transition: 0.8s;
+}
+
+.side-bar__active .side-bar__nav {
+    display: flex;
+    margin: 0 20px 0 20px;
+    -webkit-transition: 0.4s;
+    -moz-transition: 0.4s;
+    -o-transition: 0.4s;
+    transition: 0.4s;
+}
+
+.side-bar__link {
+    padding: 18px 40px;
+    text-decoration: none;
+    letter-spacing: 0.5px;
+    color: #d5d5d7;
+}
+
+.side-bar__link:hover {
+    filter: brightness(0.9);
+    border-radius: 30px;
+    color: #cabdfb;
+}
+
+.main-content {
+    box-sizing: border-box;
+    flex: 70%;
+    color: #d5d5d7;
+    min-height: 80vh;
+    background-color: #35303d;
+    margin: 20px;
+    padding: 30px;
+    border-radius: 30px;
+    width: 90%;
+}
+.section-0, .section-1, .section-2{
+    display: none;
+}
+.show{
+    display: block;
+}
+.flex-direction {
+    display: flex;
+    flex-direction: column;
+}
+
+.flex-block {
+    display: flex;
+    margin-top: 10px;
+}
+
+
+.checkbox-block__text {
+    margin: -4px 0 0 10px;
+}
+.text{
+    margin: 0 14px 0 0;
+}
+.btn{
+    background: #cabdfb;
+    height: 40px;
+    margin-top: 10px;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    color: rgba(24, 24, 24, 255);
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    cursor: pointer;
+}
+.btn:hover{
+    filter: brightness(0.9);
+}
+.result{
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+.circle-color {
+    width: 20%;
+    border-radius: 50%;
+    background:  #d5d5d7;
+    line-height: 0;
+    margin: 10px;
+}
+
+.circle-color::after {
+    content: "";
+    display: block;
+    padding-bottom: 100%;
+}
+
+.circle-color__yellow{
+    background: #fdf9c2;
+}
+.circle-color__green{
+    background:  #c9fee4;
+}
+.circle-color__blue{
+    background:  #c3e2fc;
+}
+
+@media only screen and (min-width: 1200px) {
+    .flex-direction {
+        flex-direction: row;
+    }
+
+    .side-bar__nav {
+        min-width: 240px;
+        max-width: 300px;
+        height: 100%;
+        border-radius: 30px;
+        margin: 20px;
+    }
+
+}
+

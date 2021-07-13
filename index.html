@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+<div class="container">
+    <header class="header">
+        <button href="" class="toggle-button toggle-button__active">
+            <span class="toggle-button__lines"></span>
+        </button>
+        <p id="logo">Junior level</p>
+    </header>
+    <div class="flex-direction">
+        <div class="side-bar side-bar__active">
+            <nav class=" side-bar__nav ">
+                <a href="#section-0" onclick="navigation(0)" class="side-bar__link">Чек-боксы</a>
+                <a href="#section-1" onclick="navigation(1)" class="side-bar__link">Сдвиг массива влево</a>
+                <a href="#section-2" onclick="navigation(2)" class="side-bar__link">Наибольшая общая последовательность</a>
+            </nav>
+        </div>
+        <div class="main-content">
+            <section class="section-0 show">
+                <h2>Выберите цвет</h2>
+
+                <div class="checkbox-block-1 flex-block">
+                    <input type="checkbox" class="checkbox-block__element" value="0">
+                    <p class="checkbox-block__text">Желтый</p>
+                </div>
+                <div class="checkbox-block-2 flex-block">
+                    <input type="checkbox" class="checkbox-block__element" value="1">
+                    <p class="checkbox-block__text ">Зеленый</p>
+                </div>
+                <div class="checkbox-block-3 flex-block">
+                    <input type="checkbox" class="checkbox-block__element" value="2">
+                    <p class="checkbox-block__text ">Голубой</p>
+                </div>
+                <div class="checkbox-block-4 flex-block">
+                    <input type="checkbox" class="checkbox-block__element" value="3">
+                    <p class="checkbox-block__text ">Все цвета</p>
+                </div>
+                <div class="flex-block" id="circle-colors">
+                    <span class="circle-color"></span>
+                    <span class="circle-color"></span>
+                    <span class="circle-color"></span>
+                </div>
+
+
+            </section>
+            <section class="section-1">
+                <h2>Сдвиг массива влево</h2>
+                <div class="flex-block">
+                    <p class="text">Введите массив через пробел</p>
+                    <input type="text" class="section-1__value">
+                </div>
+                <div class="flex-block">
+                    <p class="text">K</p>
+                    <input type="text" class="section-1__value">
+                </div>
+                <button class="btn" id="section-1__btn">Получить результат</button>
+                <p class="section-1__result result"></p>
+            </section>
+            <section class="section-2 ">
+                <h2>Наибольшая общая последовательность</h2>
+                <div class="flex-block">
+                    <p class="text">Строка А</p>
+                    <input type="text" class="section-2__value">
+                </div>
+                <div class="flex-block">
+                    <p class="text">Строка Б</p>
+                    <input type="text" class="section-2__value">
+                </div>
+                <button class="btn" id="section-2__btn">Получить результат</button>
+                <p class="section-2__result result"></p>
+            </section>
+        </div>
+    </div>
+</div>
+</body>
+<script type="text/javascript" src="script.js"></script>
+</html>
